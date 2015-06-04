@@ -85,16 +85,15 @@ vector<Offer> Controller::filterbyType(string type, vector<Offer> filtered){
   {
 	  toBeFiltered = this->repo->getAll();
   }
-  for (vector<Offer>::iterator p = toBeFiltered.begin(); p != toBeFiltered.end() ; ++p) {
-    if (p->getType() == type){
-      filtered.push_back(*p);
+  for (auto p : toBeFiltered) {
+    if (p.getType() == type){
+      filtered.push_back(p);
     }
   }
   return filtered;
 }
 
 vector<Offer> Controller::filterbyPrice(float price, vector<Offer> filtered){
-//  vector<Offer> filtered;
 	vector<Offer> toBeFiltered;
   if (filtered.size() != 0){
 	  toBeFiltered = filtered;
@@ -103,9 +102,9 @@ vector<Offer> Controller::filterbyPrice(float price, vector<Offer> filtered){
   {
 	  toBeFiltered = this->repo->getAll();
   }
-  for (vector<Offer>::iterator p = toBeFiltered.begin(); p != toBeFiltered.end() ; ++p) {
-    if (p->getPrice() == price){
-      filtered.push_back(*p);
+  for (auto p : toBeFiltered) {
+    if (p.getPrice() == price){
+      filtered.push_back(p);
     }
   }
   return filtered;
@@ -113,9 +112,9 @@ vector<Offer> Controller::filterbyPrice(float price, vector<Offer> filtered){
 
 void Controller::printAll(vector<Offer> offers)
 {
-	for (int i = 0; i < offers.size(); i++)
+	for (auto i : offers)
 	{
-		cout << offers.at(i).getPrice() << offers.at(i).getDest() << offers.at(i).getType() << endl;
+		cout << i.getPrice() << i.getDest() << i.getType() << endl;
 	}
 
 }

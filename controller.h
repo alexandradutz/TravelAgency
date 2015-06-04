@@ -19,7 +19,7 @@ using namespace std;
 class Controller
 {
 private:
-	AbstractRepository<Offer> *repo;
+	AbstractRepository<Offer>* repo;
 	vector<vector<Offer> > uList;
 public:
 	/*
