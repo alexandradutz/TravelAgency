@@ -7,10 +7,10 @@
 /*
  * Initializes Controller
  */
-Controller::Controller(AbstractRepository<Offer>* repo)
+Controller::Controller(shared_ptr<AbstractRepository<Offer>> repo)
 {
 	this->repo = repo;
-	this->uList = uList;
+//	this->uList = uList;
 };
 
 /*

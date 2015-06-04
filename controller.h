@@ -13,13 +13,14 @@
 #include <vector>
 #include "repository.h"
 #include "AbstractRepository.h"
+#include <memory>
 
 using namespace std;
 
 class Controller
 {
 private:
-	AbstractRepository<Offer>* repo;
+	shared_ptr<AbstractRepository<Offer>> repo;
 	vector<vector<Offer> > uList;
 public:
 	/*
@@ -30,7 +31,7 @@ public:
 	/*
 	 *Copy constructor
 	 */
-	Controller(AbstractRepository<Offer>* repo);
+	Controller(shared_ptr<AbstractRepository<Offer>> repo);
 
 	/*
 	 *Destructor
