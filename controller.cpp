@@ -9,7 +9,7 @@
  */
 Controller::Controller(shared_ptr<AbstractRepository<Offer>> repo)
 {
-	this->repo = repo;
+	this->repo  = repo;
 //	this->uList = uList;
 };
 

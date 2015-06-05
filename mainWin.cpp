@@ -11,7 +11,7 @@
 #include "controller.h"
 #include "update.h"
 
-TravelAgencyGUI::TravelAgencyGUI(Controller* ctrl, QWidget *parent) :
+TravelAgencyGUI::TravelAgencyGUI(shared_ptr<Controller> ctrl, QWidget *parent) :
 	QWidget(parent), ui(new Ui::TravelAgencyGUIClass)
 {
 	this->ctrl = ctrl;

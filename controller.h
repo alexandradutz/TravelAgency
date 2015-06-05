@@ -21,7 +21,6 @@ class Controller
 {
 private:
 	shared_ptr<AbstractRepository<Offer>> repo;
-	vector<vector<Offer> > uList;
 public:
 	/*
 	* Default constructor

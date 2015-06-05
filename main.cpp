@@ -10,10 +10,10 @@
 
 int main (int argc, char *argv[]) {
 	QApplication a{argc, argv};
-	shared_ptr<AbstractRepository<Offer>> repo{ new OfferFileRepository{ "E:/Faculta/Anul I/Semestrul II/Eclipse Workspace/NewTravelAg/src/offers.txt" } };
+	shared_ptr<AbstractRepository<Offer>> repo{ new OfferFileRepository{ "offers.txt" } };
 
-	Controller* ctrl = new Controller {repo } ;
-	TravelAgencyGUI window{ctrl, 0};
+	shared_ptr<Controller> ctrl{ new Controller{ repo } };
+	TravelAgencyGUI window(ctrl, 0);
 	window.show();
 
 

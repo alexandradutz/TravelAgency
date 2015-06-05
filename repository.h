@@ -11,18 +11,19 @@
 #include "MyException.h"
 #include "AbstractRepository.h"
 #include "validator.h"
+#include <memory>
 
 using namespace std;
 
 template <typename T>
 class Repository : public AbstractRepository<T> {
   vector<T> offerList;
-  EntityValidator<T> *validator;
+  EntityValidator<T>* validator;
 
 public:
   virtual ~Repository();
   Repository();
-  Repository(EntityValidator<T> *validator);
+  Repository(EntityValidator<T>* validator);
   vector<T> getAll();
 
   virtual void save(T p) throw (MyException);
@@ -37,7 +38,6 @@ template <typename T>
 Repository<T>::Repository() {
 	/* Initializes repository
 	*/
-
 	this->validator = new OfferValidator;
 	offerList.resize(0);
 }

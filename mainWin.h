@@ -14,7 +14,7 @@ class TravelAgencyGUI : public QWidget
 	Q_OBJECT
 
 public:
-	explicit TravelAgencyGUI(Controller* ctrl = 0, QWidget *parent = 0);
+	explicit TravelAgencyGUI(shared_ptr<Controller> ctrl = 0, QWidget *parent = 0);
 	~TravelAgencyGUI();
 
 private:
@@ -23,7 +23,7 @@ private:
 
 	Ui::TravelAgencyGUIClass *ui;
 
-	Controller* ctrl;
+	shared_ptr<Controller> ctrl;
 	QListWidget* offerList;
 	QLineEdit* txtPrice, *txtDestination, *txtType;
 

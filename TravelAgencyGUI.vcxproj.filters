@@ -119,5 +119,8 @@
     <Text Include="controller.cpp">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="E:\Faculta\Anul I\Semestrul II\Eclipse Workspace\NewTravelAg\src\offers.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

@@ -161,6 +161,7 @@
   <ItemGroup>
     <Text Include="controller.cpp" />
     <Text Include="controller.h" />
+    <Text Include="E:\Faculta\Anul I\Semestrul II\Eclipse Workspace\NewTravelAg\src\offers.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
